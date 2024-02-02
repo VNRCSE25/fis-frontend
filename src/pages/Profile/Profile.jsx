@@ -4,7 +4,7 @@ import Modal from 'react-bootstrap/Modal';
 function Profile() {
     let [userData, setuserData] = useState([])
     useEffect(() => {
-        fetch("/faculty")
+        fetch("https://fmp-mongodb-api.onrender.com/faculty")
             .then(result => result.json())
             .then(data => setuserData(data))
             .catch(error => console.log("Error is", error))

@@ -51,7 +51,7 @@ function History() {
     const fetchkeys=async()=>{
       await axios
       .get(
-        `/classtimetable-api/academicyearkeys`
+        `https://fmp-mongodb-api.onrender.com/classtimetable-api/academicyearkeys`
       )
       .then((response) => {
         setkeys(response.data);
@@ -168,7 +168,7 @@ function History() {
       })
     });
     const key = `${academicyear}.${graduation}.${sem}`
-    await axios.get(`/classfaculty-api/classtt-data/${classkeys}/${key}`)
+    await axios.get(`https://fmp-mongodb-api.onrender.com/classfaculty-api/classtt-data/${classkeys}/${key}`)
       .then((response) => {
         setclasstt(response.data)
       })
@@ -217,7 +217,7 @@ function History() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`/facultytimetable-api/faculty-data-total`);
+        const response = await axios.get(`https://fmp-mongodb-api.onrender.com/facultytimetable-api/faculty-data-total`);
         setSearchResults(response.data);
       } catch (error) {
       }
@@ -340,7 +340,7 @@ function History() {
     } else {
       try {
         const response = await axios.get(
-          `/facultytimetable-api/faculty-typearraydata/${factypearray}`
+          `https://fmp-mongodb-api.onrender.com/facultytimetable-api/faculty-typearraydata/${factypearray}`
         );
         console.log("hi : ", response.data);
         if (response.data.length > 0) {

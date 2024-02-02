@@ -50,14 +50,14 @@ const Search = ({data}) => {
       console.log(data);
       console.log(searchId)
       try {
-        const response =axios.get(`/classtimetable-api/classtt-data/${data}`);
+        const response =axios.get(`https://fmp-mongodb-api.onrender.com/classtimetable-api/classtt-data/${data}`);
         setDataclass(response.data);
         console.log(response.data);
       } catch (error) {
         console.log(error);
       }
       try {
-        const response =axios.get(`/classfaculty-api/classfaculty-data/${data}`);
+        const response =axios.get(`https://fmp-mongodb-api.onrender.com/classfaculty-api/classfaculty-data/${data}`);
         setDatafaculty(response.data);
         console.log(facultydata)
       } catch (error) {

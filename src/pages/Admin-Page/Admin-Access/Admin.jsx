@@ -20,7 +20,7 @@ function Admin() {
     // Fetch user details from the server
     const token = localStorage.getItem("token");
     axios
-      .get("/user-api/get-user-info", {
+      .get("https://fmp-mongodb-api.onrender.com/user-api/get-user-info", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -51,7 +51,7 @@ function Admin() {
 
       // Example: You may want to send an API request to update user data
       const token = localStorage.getItem("token");
-      let response=await axios.put("/user-api/update", userDetails, {
+      let response=await axios.put("https://fmp-mongodb-api.onrender.com/user-api/update", userDetails, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -18,7 +18,7 @@ const Others =() => {
   useEffect(() => {
     const fetchlist = async () => {
       try {
-        const response = await axios.get(`/facultytimetable-api/faculty-data-total`);
+        const response = await axios.get(`https://fmp-mongodb-api.onrender.com/facultytimetable-api/faculty-data-total`);
         setSearchResults(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -34,7 +34,7 @@ const Others =() => {
   const handleSearch = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`/facultytimetable-api/classfaculty-data/${searchId}`);
+      const response = await axios.get(`https://fmp-mongodb-api.onrender.com/facultytimetable-api/classfaculty-data/${searchId}`);
       if (response.data) {
         setData(response.data);
         setSearchTerm("");

@@ -23,7 +23,7 @@ function ProfessorsData() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`/facultytimetable-api/faculty-data-total`);
+        const response = await axios.get(`https://fmp-mongodb-api.onrender.com/facultytimetable-api/faculty-data-total`);
         setSearchResults(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -43,7 +43,7 @@ function ProfessorsData() {
     } else {
       try {
         const response = await axios.get(
-          `/facultytimetable-api/classfaculty-data/${searchId}`
+          `https://fmp-mongodb-api.onrender.com/facultytimetable-api/classfaculty-data/${searchId}`
         );
         if (response.data) {
           setFacultyData([response.data]);
@@ -73,7 +73,7 @@ function ProfessorsData() {
     } else {
       try {
         const response = await axios.get(
-          `/facultytimetable-api/faculty-data/${type}`
+          `https://fmp-mongodb-api.onrender.com/facultytimetable-api/faculty-data/${type}`
         );
         if (response.data.length > 0) {
           setFacultyData(response.data);

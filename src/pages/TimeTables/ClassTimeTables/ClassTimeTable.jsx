@@ -69,7 +69,7 @@ function ClassTimeTable() {
     const fetchkeys=async()=>{
       await axios
       .get(
-        `/classtimetable-api/academicyearkeys`
+        `https://fmp-mongodb-api.onrender.com/classtimetable-api/academicyearkeys`
       )
       .then((response) => {
         setkeys(response.data);
@@ -195,7 +195,7 @@ function ClassTimeTable() {
     if (isValid) {
       try {
         const response = await axios.get(
-          `/classtimetable-api/classtt-data/${classid}/${academicyear}/${graduation}/${sem}`
+          `https://fmp-mongodb-api.onrender.com/classtimetable-api/classtt-data/${classid}/${academicyear}/${graduation}/${sem}`
         );
 
         if (response.data) {

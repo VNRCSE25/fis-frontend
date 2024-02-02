@@ -44,7 +44,7 @@ const ContactUS = () => {
     const fetchlist = async () => {
       try {
         const response = await axios.get(
-          "/facultytimetable-api/faculty-data-total"
+          "https://fmp-mongodb-api.onrender.com/facultytimetable-api/faculty-data-total"
         );
         setSearchResults(response.data);
       } catch (error) {
@@ -72,7 +72,7 @@ const ContactUS = () => {
     } else {
       try {
         const response = await axios.get(
-          `/freehours-api/full-data/${searchId}`
+          `https://fmp-mongodb-api.onrender.com/freehours-api/full-data/${searchId}`
         );
         if (response.data) {
           setFacData(response.data);
@@ -107,7 +107,7 @@ const ContactUS = () => {
     passobj["timevalue"] = timevalue;
     console.log("final data :", passobj, selectedFaculty, timevalue);
     try {
-      const response = await axios.post("/freehours-api/fac-update", passobj);
+      const response = await axios.post("https://fmp-mongodb-api.onrender.com/freehours-api/fac-update", passobj);
       console.log("Success:", response.data);
     } catch (error) {
       console.error("Error:", error);

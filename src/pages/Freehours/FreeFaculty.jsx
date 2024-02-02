@@ -57,7 +57,7 @@ function FreeFaculty() {
     for (let i = 0; i < freeFaculty.length; i++) {
       try {
         const response = await axios.get(
-          `/facultylist-api/faculty-data/${freeFaculty[i]}`
+          `https://fmp-mongodb-api.onrender.com/facultylist-api/faculty-data/${freeFaculty[i]}`
         );
         array.push(response.data);
       } catch (error) {
@@ -203,7 +203,7 @@ function FreeFaculty() {
     if (isvalid) {
       try {
         await axios
-          .get(`/freehours-api/freehours-get/${date}/${parts}/${selectedOptions}`)
+          .get(`https://fmp-mongodb-api.onrender.com/freehours-api/freehours-get/${date}/${parts}/${selectedOptions}`)
           .then((response) => {
             console.log("Success:", response.data);
             setFreeFaculty(response.data);

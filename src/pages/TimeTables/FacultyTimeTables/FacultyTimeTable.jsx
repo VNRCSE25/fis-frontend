@@ -31,7 +31,7 @@ const FacultyTimeTable = () => {
     const fetchlist = async () => {
       try {
         const response = await axios.get(
-          `/facultytimetable-api/faculty-data-total`
+          `https://fmp-mongodb-api.onrender.com/facultytimetable-api/faculty-data-total`
         );
         setSearchResults(response.data);
       } catch (error) {
@@ -50,7 +50,7 @@ const FacultyTimeTable = () => {
     else {
       try {
         const response = await axios.get(
-          `/facultytimetable-api/classfaculty-data/${searchId}`
+          `https://fmp-mongodb-api.onrender.com/facultytimetable-api/classfaculty-data/${searchId}`
         );
         if (response.data) {
           setData(response.data);
