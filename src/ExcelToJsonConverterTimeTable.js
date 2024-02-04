@@ -230,7 +230,7 @@ function ExcelUploader() {
         </div>
         <h1> Delete the list inserted</h1>
         <div className="row ">
-        <div className="col-lg-2 col-sm-12 col-md-4 p-3">
+        <div className="col-lg-4 col-sm-12 col-md-4 p-3">
           <Form.Select value={academicyear} onChange={handlechangeacademicyear} isInvalid={!!academicyearError}>
           <option>Academic year</option>
           {keys.map((key, index) => (
@@ -241,7 +241,7 @@ function ExcelUploader() {
           <Form.Control.Feedback type="invalid">{academicyearError}</Form.Control.Feedback>
         </Form.Select>
         </div>
-          <div className="col-lg-2 col-sm-12 col-md-4 p-3">
+          <div className="col-lg-4 col-sm-12 col-md-4 p-3">
             <Form.Select value={graduation} onChange={handlechangegraduation} isInvalid={!!graduationError}>
               <option>select course</option>
               <option value="Btech">UG</option>
@@ -249,7 +249,7 @@ function ExcelUploader() {
               <Form.Control.Feedback type="invalid">{graduationError}</Form.Control.Feedback>
             </Form.Select>
           </div>
-          <div className="col-lg-2 col-sm-12 col-md-4 p-3">
+          <div className="col-lg-4 col-sm-12 col-md-4 p-3">
           <Form.Select value={semester} onChange={handlechangesem} isInvalid={!!semesterError}>
           <option>select sem</option>
           <option value="1">1</option>

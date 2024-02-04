@@ -364,7 +364,7 @@ function FreeFaculty() {
         <div className="col-lg-2 col-md-6 col-sm-6 text-end">
           <Button
             onClick={handleSearch}
-            className="p-3 w-100 bg-success border-success"
+            className="p-3 m-1 w-100 bg-success border-success"
           >
             Search
           </Button>
@@ -378,7 +378,7 @@ function FreeFaculty() {
         {truevalue === "1" &&
           facultyvalue === "1" &&
           freeFacultyInfo.length > 0 && (
-            <div className="history-results">
+            <div >
               <div className="row">
                 <h3 className="text-primary p-2 text-center">
                   Total faculty available :
