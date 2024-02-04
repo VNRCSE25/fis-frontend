@@ -1,22 +1,17 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
 import axios from "axios";
-import { useForm } from "react-hook-form";
 import { Dropdown } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
-import { useNavigate } from "react-router-dom";
-import { loginContext } from "../../contexts/loginContext";
 import { useSpring, animated } from "react-spring";
 function FreeFaculty() {
-  let [currentUser, loginUser, userLoginStatus, loginErr, logoutUser] = useContext(loginContext);
-  let navigate = useNavigate();
   const [searchTime1, setSearchTime1] = useState("");
   const [searchTime2, setSearchTime2] = useState("");
   const [freeFaculty, setFreeFaculty] = useState("");
   const [truevalue, setTrueValue] = useState("");
   const [facultyvalue, setFacultyValue] = useState("");
-  const [freeFacultyInfo, setFreeFacultyInfo] = useState("");
+  const [freeFacultyInfo, setFreeFacultyInfo] = useState([]);
   const [date, setSelectedOption] = useState("");
   const [dateError, setDateError] = useState("");
   const [st1error, setst1error] = useState("");
@@ -234,7 +229,7 @@ function FreeFaculty() {
   }, [selectedOptions, searchTime1, searchTime2, date]);
 
   const handleyearchange = (event) => {
-    const optionId = event.target.id;
+    const optionId = event.target.value;
     const isChecked = event.target.checked;
 
     if (isChecked) {
@@ -328,26 +323,31 @@ function FreeFaculty() {
                 <div className="p-3">
                   <Form.Check
                     id="1"
+                    value="1"
                     label="I Year"
                     onChange={handleyearchange}
                   />
                   <Form.Check
                     id="2"
+                    value="2"
                     label="II Year"
                     onChange={handleyearchange}
                   />
                   <Form.Check
                     id="3"
+                    value="3"
                     label="III Year"
                     onChange={handleyearchange}
                   />
                   <Form.Check
                     id="4"
+                    value="4"
                     label="IV Year"
                     onChange={handleyearchange}
                   />
                   <Form.Check
                     id="0"
+                    value="0"
                     label="Others"
                     onChange={handleyearchange}
                   />
