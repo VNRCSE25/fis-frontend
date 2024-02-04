@@ -97,7 +97,7 @@ function FreeFaculty() {
     const [endHour, endMinute = "00"] = end.split(".");
     if (parseInt(startHour, 10) > parseInt(endHour, 10)) {
       setTrueValue("0");
-      setFreeFaculty("");
+      setFreeFaculty([]);
       setFacultyValue("0");
     } else setTrueValue("1");
     const sh1 = startHour;
@@ -207,14 +207,14 @@ function FreeFaculty() {
           })
           .catch((error) => {
             console.error("Error:", error);
-            setFreeFaculty(null);
+            setFreeFaculty([]);
           });
       } catch (error) {
         console.log(error);
       }
     }
     else{
-      setFreeFaculty(null)
+      setFreeFaculty([])
     }
   };
   useEffect(()=>{
