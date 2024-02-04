@@ -8,7 +8,7 @@ import { useSpring, animated } from "react-spring";
 function FreeFaculty() {
   const [searchTime1, setSearchTime1] = useState("");
   const [searchTime2, setSearchTime2] = useState("");
-  const [freeFaculty, setFreeFaculty] = useState("");
+  const [freeFaculty, setFreeFaculty] = useState([]);
   const [truevalue, setTrueValue] = useState("");
   const [facultyvalue, setFacultyValue] = useState("");
   const [freeFacultyInfo, setFreeFacultyInfo] = useState([]);
@@ -49,6 +49,8 @@ function FreeFaculty() {
     let array = [];
     setFreeFacultyInfo(array);
     setFacultyValue("0");
+    if (freeFaculty.length===0) return null;
+
     for (let i = 0; i < freeFaculty.length; i++) {
       try {
         const response = await axios.get(

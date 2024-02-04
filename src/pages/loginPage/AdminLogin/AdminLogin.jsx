@@ -7,7 +7,6 @@ import Form from 'react-bootstrap/Form';
 import './AdminLogin.css'
 import { Button } from 'react-bootstrap';
 import { useSpring,animated } from 'react-spring';
-import { useEffectStyle } from 'react-figma';
 function AdminLogin() {
   let [, loginUser, userLoginStatus, loginErr,] = useContext(loginContext)
   const navigate = useNavigate()
