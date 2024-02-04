@@ -26,7 +26,7 @@ function ExcelUploader() {
     const fetchkeys=async()=>{
       await axios
       .get(
-        `/classtimetable-api/academicyearkeys`
+        `https://fmp-mongodb-api.onrender.com/classtimetable-api/academicyearkeys`
       )
       .then((response) => {
         setkeys(response.data);
@@ -57,7 +57,7 @@ function ExcelUploader() {
     obj['dt1'] = dt1
     obj['dt2'] = dtp
     await axios
-      .post("/classfaculty-api/classtt-insert", obj)
+      .post("https://fmp-mongodb-api.onrender.com/classfaculty-api/classtt-insert", obj)
       .then((response) => {
         console.log("insertion into classtimtable api is success : ");
       })
@@ -67,7 +67,7 @@ function ExcelUploader() {
   }
   const dataupdate = async () => {
     await axios
-      .post("/classtimetable-api/class-insert", table)
+      .post("https://fmp-mongodb-api.onrender.com/classtimetable-api/class-insert", table)
       .then((response) => {
         console.log("insertion into classtimtable api is success : ");
       })
@@ -77,7 +77,7 @@ function ExcelUploader() {
   };
   const listupdate = async () => {
     await axios
-      .post("/facultylist-api/facultydata", faclist)
+      .post("https://fmp-mongodb-api.onrender.com/facultylist-api/facultydata", faclist)
       .then((response) => {
         console.log("insertion into classtimtable api is success : ");
       })
@@ -87,7 +87,7 @@ function ExcelUploader() {
   };
   const handleReset = async () => {
     let response = await axios
-      .delete("/facultytimetable-api/reset")
+      .delete("https://fmp-mongodb-api.onrender.com/facultytimetable-api/reset")
       .then((response) => {
         console.log("Updated data is reset: ");
       })
@@ -116,7 +116,7 @@ function ExcelUploader() {
     }
 
     if (isValid) {
-        await axios.get(`/classfaculty-api/delete_data/${academicyear}/${graduation}/${semester}`)
+        await axios.get(`https://fmp-mongodb-api.onrender.com/classfaculty-api/delete_data/${academicyear}/${graduation}/${semester}`)
       .then((response) => {
       })
       .catch((error) => {
