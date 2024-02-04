@@ -82,9 +82,14 @@ tr:nth-child(odd) {
 	background-color: #50d8d7;
     background-image: linear-gradient(316deg, #50d8d7 0%, #923993 74%);
 } */
-
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+  background-color: #ddd;
+}
 td:hover {
-  background-color: var(--link-color);
+  background-color:#71b280;
 }
 
 th {
