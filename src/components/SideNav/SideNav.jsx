@@ -153,7 +153,9 @@ const SideNav = () => {
                 </Link>
               </MenuItem>
             </animated.div>
-            <animated.div className="menuitem1 mt-2">
+            {
+              userLoginStatus &&
+              (<animated.div className="menuitem1 mt-2">
               <MenuItem
                 icon={
                   <Link className="text-col fa fa-file" to="history"></Link>
@@ -167,7 +169,8 @@ const SideNav = () => {
                   </li>
                 </Link>
               </MenuItem>
-            </animated.div>
+            </animated.div>)
+            }
             {!userLoginStatus ? (
               <animated.div className="menuitem1 mt-2" style={slideIn}>
                 <MenuItem

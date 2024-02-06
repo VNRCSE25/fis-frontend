@@ -787,6 +787,14 @@ function History() {
               {message && <h3>{message}</h3>}
               {DisplayData.length > 0 ? (
                 <div>
+                  <div className="" style={{ position: "relative" }}>
+                    <Button
+                      onClick={handleSelectedFaculty}
+                      className="p-3 btn-secondary"
+                    >
+                      Download
+                    </Button>
+                  </div>
                   <div className="col-lg-12 col-sm-12 col-md-12">
                     <div
                       className="container m-3 history-results"
@@ -833,14 +841,7 @@ function History() {
                       </div>
                     </div>
                   </div>
-                  <div className="" style={{ position: "relative" }}>
-                    <Button
-                      onClick={handleSelectedFaculty}
-                      className="p-3 btn-secondary"
-                    >
-                      Download
-                    </Button>
-                  </div>
+
                 </div>
               ) : null}
             </div>
