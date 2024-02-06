@@ -380,14 +380,14 @@ function FreeFaculty() {
           freeFacultyInfo.length > 0 && (
             <div >
               <div className="row">
-                <h3 className="text-primary p-2 text-center">
+                <h3 className="text-white p-2 text-center">
                   Total faculty available :
-                  <span className="text-success text-right p-3 mx-auto">
+                  <span className="text-white p-3 mx-auto">
                     {freeFacultyInfo.length}
                   </span>
                   <Button
                     onClick={handleDownload}
-                    className="p-3 btn-success"
+                    className="p-3 btn-success text-white"
                   >
                     Download
                   </Button>
