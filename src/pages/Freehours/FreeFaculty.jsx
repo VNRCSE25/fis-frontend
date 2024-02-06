@@ -398,7 +398,7 @@ function FreeFaculty() {
                   <tr>
                     <th>Faculty-Id</th>
                     <th>Faculty-Name</th>
-                    <th>Designition</th>
+                    <th>Designation</th>
                   </tr>
                 </thead>
                 <tbody>

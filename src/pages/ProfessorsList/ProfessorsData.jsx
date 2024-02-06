@@ -232,7 +232,7 @@ function ProfessorsData() {
                     <tr>
                       <th>Faculty-Id</th>
                       <th>Faculty-Name</th>
-                      <th>Designition</th>
+                      <th>Designation</th>
                       {/* <th>Timetables</th> */}
                     </tr>
                   </thead>
@@ -242,14 +242,14 @@ function ProfessorsData() {
                         <td>{row.username}</td>
                         <td>{row.name}</td>
                         <td>{row.facultytype}</td>
-                        <td>
-                          {/* <Button
+                        {/* <td>
+                          <Button
                             className="btn-success"
                             onClick={handleSearch}
                           >
                             Timetable
-                          </Button> */}
-                        </td>
+                          </Button>
+                        </td> */}
                       </tr>
                     ))}
                   </tbody>
