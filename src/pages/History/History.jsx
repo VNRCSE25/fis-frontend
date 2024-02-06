@@ -64,7 +64,7 @@ function History() {
     fetchkeys();
   },[])
   useEffect(() => {
-    if (type === "" || sem === "" || academicyear === "") {
+    if (type === "0" || sem === "0" || academicyear === "0") {
       setclassvalue(0)
       setfacvalue(0)
     }
@@ -463,7 +463,7 @@ function History() {
           </div>
           <div className="col-lg-4 col-sm-12 col-md-4 p-3">
             <Form.Select value={sem} onChange={handlechangesem} isInvalid={!!semesterError}>
-              <option>select sem</option>
+              <option value="0">select sem</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <Form.Control.Feedback type="invalid">{semesterError}</Form.Control.Feedback>
@@ -471,7 +471,7 @@ function History() {
           </div>
           <div className="col-lg-4 col-sm-12 col-md-4 p-3">
             <Form.Select value={type} onChange={handlechangetype}>
-              <option>select type</option>
+              <option value="0">select type</option>
               <option value="class">class time table</option>
               <option value="faculty">faculty time table</option>
             </Form.Select>
@@ -487,7 +487,7 @@ function History() {
                   onChange={handlechangegraduation}
                   className="text-center"
                 >
-                  <option>select course</option>
+                  <option value="0">select course</option>
                   <option value="Btech">BTech</option>
                   <option value="Mtech">MTech</option>
                 </Form.Select>

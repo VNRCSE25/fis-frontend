@@ -232,8 +232,8 @@ function ProfessorsData() {
                     <tr>
                       <th>Faculty-Id</th>
                       <th>Faculty-Name</th>
-                      <th>Faculty-Type</th>
-                      <th>Timetables</th>
+                      <th>Designition</th>
+                      {/* <th>Timetables</th> */}
                     </tr>
                   </thead>
                   <tbody>

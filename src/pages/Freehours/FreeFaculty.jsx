@@ -396,9 +396,9 @@ function FreeFaculty() {
               <table className="m-4 mx-auto">
                 <thead className="text-dark">
                   <tr>
-                    <th>faculty-id</th>
-                    <th>faculty-name</th>
-                    <th>faculty-type</th>
+                    <th>Faculty-Id</th>
+                    <th>Faculty-Name</th>
+                    <th>Designition</th>
                   </tr>
                 </thead>
                 <tbody>
