@@ -17,7 +17,7 @@ function ProfessorsData() {
   const navigate = useNavigate();
   const [dv, sdv] = useState(0);
 
-  const [currentUser, loginUser, userLoginStatus, loginErr, logoutUser] =
+  const [, , userLoginStatus, , ] =
     useContext(loginContext);
 
   useEffect(() => {
@@ -112,24 +112,24 @@ function ProfessorsData() {
       item.facultytype.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const goingBack = () => {
-    if (userLoginStatus) {
-      navigate("/adminpage");
-    } else {
-      navigate("/");
-    }
-  };
-  const bounceAnimation = useSpring({
-    to: async (next) => {
-      await next({ transform: "translateY(-20px)" });
-      await next({ transform: "translateY(20px)" });
-      await next({ transform: "translateY(-10px)" });
-      await next({ transform: "translateY(10px)" });
-      await next({ transform: "translateY(0px)" });
-    },
-    from: { transform: "translateY(-20px)" },
-    config: { duration: 200 },
-  });
+  // const goingBack = () => {
+  //   if (userLoginStatus) {
+  //     navigate("/adminpage");
+  //   } else {
+  //     navigate("/");
+  //   }
+  // };
+  // const bounceAnimation = useSpring({
+  //   to: async (next) => {
+  //     await next({ transform: "translateY(-20px)" });
+  //     await next({ transform: "translateY(20px)" });
+  //     await next({ transform: "translateY(-10px)" });
+  //     await next({ transform: "translateY(10px)" });
+  //     await next({ transform: "translateY(0px)" });
+  //   },
+  //   from: { transform: "translateY(-20px)" },
+  //   config: { duration: 200 },
+  // });
   const diagonalSlideAnimation = useSpring({
     to: { transform: "translateX(10px) translateY(10px)" },
     from: { transform: "translateX(-5px) translateY(-5px)" },
@@ -214,12 +214,12 @@ function ProfessorsData() {
           >
             Fetch
           </Button>
-          <Button
+          {/* <Button
             className="col-lg-2 col-sm-5 col-md-5  btn-danger"
             onClick={goingBack}
           >
             GO BACK
-          </Button>
+          </Button> */}
         </div>
       </div>
       <div>
